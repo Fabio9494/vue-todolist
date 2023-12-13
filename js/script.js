@@ -2,8 +2,7 @@ const {createApp} = Vue;
 
 createApp({
     data(){
-        return{
-            
+        return{ 
             todoList:[
                 {
                    text: "cucinare",
@@ -32,6 +31,9 @@ createApp({
         check(i){
             if(!this.todoList[i].done){
                 this.todoList[i].done=true;
+            }
+            else{
+                this.todoList[i].done=false;
             }
         },
         removeItem(i){
