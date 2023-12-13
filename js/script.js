@@ -39,6 +39,14 @@ createApp({
             if(conf){
                 this.todoList.splice(i,1);
             }
+        },
+        addItem(){
+            let obj={
+                text: this.newItem,
+                done: false
+            }
+            this.todoList.push(obj);
+            this.newItem = ""
         }
     },
 }).mount('#app');
