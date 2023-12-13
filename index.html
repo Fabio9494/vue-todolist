@@ -20,7 +20,7 @@
             </li>
         </ul>
         <div class="m-2 d-flex justify-content-between w-50 ">
-            <input class="w-75" type="text" v-model="newItem">
+            <input class="w-75" type="text" v-model="newItem" placeholder="Inserisci nuovo elemento alla lista" @keyup.enter="addItem">
             <button class="btn btn-primary" @click="addItem">Aggiungi</button>
         </div>
     </div>
