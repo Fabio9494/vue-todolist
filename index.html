@@ -14,7 +14,7 @@
             <li class="p-2 mx-2 border w-50 d-flex justify-content-between align-items-center" v-for="listItem,index in todoList" :class="listItem.done ? 'text-decoration-line-through' :''">
                 <span @click='check(index)'>{{listItem.text}}</span>
                 <div>
-                   <button class="btn btn-primary m-1" @click="check(index)"><i class="fa-solid fa-check fa-xs p-0"></i></button>
+                   <button class="btn m-1" :class="listItem.done ? 'btn-secondary' : 'btn-primary'" @click="check(index)" ><i class="fa-solid fa-check fa-xs p-0"></i></button>
                    <button class="btn btn-danger m-1" @click="removeItem(index)"><i class="fa-solid fa-trash fa-xs p-0"></i></button>
                 </div>
             </li>
